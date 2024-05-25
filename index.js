@@ -8,8 +8,6 @@ const {
   generateSquare,
   generateRectangle,
   generateEllipse,
-  generatePentagon,
-  generateHexagon,
   generateStar,
   generateHeart
 } = require('./tests/shapes');
@@ -30,7 +28,7 @@ const questions = [
     type: 'list',
     name: 'shape',
     message: 'Choose a shape for your logo:'.cyan,
-    choices: ['circle', 'triangle', 'square', 'rectangle', 'ellipse', 'pentagon', 'hexagon', 'star', 'heart']
+    choices: ['circle', 'ellipse', 'heart', 'rectangle', 'square', 'star', 'triangle']
   },
   {
     type: 'input',
@@ -57,12 +55,6 @@ function generateSVG({ text, textColor, shape, shapeColor }) {
       break;
     case 'ellipse':
       shapeElement = generateEllipse(shapeColor);
-      break;
-    case 'pentagon':
-      shapeElement = generatePentagon(shapeColor);
-      break;
-    case 'hexagon':
-      shapeElement = generateHexagon(shapeColor);
       break;
     case 'star':
       shapeElement = generateStar(shapeColor);
