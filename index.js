@@ -76,7 +76,7 @@ function generateSVG({ text, textColor, shape, shapeColor }) {
     return `
       <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         ${shapeElement}
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
+        <text x="150" y="120" font-size="40" text-anchor="middle" fill="${textColor}">${text}</text>
       </svg>
     `;
   }

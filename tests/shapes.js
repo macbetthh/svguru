@@ -27,8 +27,9 @@ function generateHexagon(color) {
 }
 
 function generateStar(color) {
-  return `<polygon points="150, 25 179, 111 269, 111 197, 165 223, 251 150, 200 77, 251 103, 165 31, 111 121, 111" fill="${color}" />`;
+  return `<polygon points="150,30 180,90 240,90 195,135 210,195 150,165 90,195 105,135 60,90 120,90" fill="${color}" />`;
 }
+
 
 function generateHeart(color) {
   return `<path d="M150,50
