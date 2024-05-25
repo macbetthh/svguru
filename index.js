@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const colors = require('colors'); // Correctly require colors
 const path = require('path');
 const {
   generateCircle,
@@ -17,24 +18,24 @@ const questions = [
   {
     type: 'input',
     name: 'text',
-    message: 'Enter up to three characters for your logo:',
-    validate: input => input.length <= 3 || 'Text must be three characters or less'
+    message: 'Enter up to three characters for your logo:'.cyan,
+    validate: input => input.length <= 3 || 'Text must be three characters or less'.red
   },
   {
     type: 'input',
     name: 'textColor',
-    message: 'Enter the text color (color keyword or hexadecimal):'
+    message: 'Enter the text color (color keyword or hexadecimal):'.cyan
   },
   {
     type: 'list',
     name: 'shape',
-    message: 'Choose a shape for your logo:',
+    message: 'Choose a shape for your logo:'.cyan,
     choices: ['circle', 'triangle', 'square', 'rectangle', 'ellipse', 'pentagon', 'hexagon', 'star', 'heart']
   },
   {
     type: 'input',
     name: 'shapeColor',
-    message: 'Enter the shape color (color keyword or hexadecimal):'
+    message: 'Enter the shape color (color keyword or hexadecimal):'.cyan
   }
 ];
 
@@ -96,5 +97,5 @@ inquirer.prompt(questions).then(answers => {
   // svg file will go to example folder
   const filePath = path.join(examplesDir, 'Generated_Logo.svg');
   fs.writeFileSync(filePath, svgContent);
-  console.log(`Find your newly generated file here: ${filePath}`);
+  console.log(`Find your newly generated file here: ${filePath}`.green);
 });
