@@ -18,14 +18,6 @@ function generateEllipse(color) {
   return `<ellipse cx="150" cy="100" rx="100" ry="60" fill="${color}" />`;
 }
 
-function generatePentagon(color) {
-  return `<polygon points="150, 30 195, 100 150, 170 105, 100" fill="${color}" />`;
-}
-
-function generateHexagon(color) {
-  return `<polygon points="150, 30 190, 75 150, 120 110, 75" fill="${color}" />`;
-}
-
 function generateStar(color) {
   return `<polygon points="150,30 180,90 240,90 195,135 210,195 150,165 90,195 105,135 60,90 120,90" fill="${color}" />`;
 }
@@ -48,8 +40,6 @@ module.exports = {
   generateSquare,
   generateRectangle,
   generateEllipse,
-  generatePentagon,
-  generateHexagon,
   generateStar,
   generateHeart
 };

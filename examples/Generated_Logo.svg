@@ -1,6 +1,6 @@
 
-      <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="150, 30 195, 100 150, 170 105, 100" fill="blue" />
-        <text x="150" y="120" font-size="40" text-anchor="middle" fill="white">bam</text>
-      </svg>
-    node
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="150,30 180,90 240,90 195,135 210,195 150,165 90,195 105,135 60,90 120,90" fill="blue" />
+      <text x="150" y="140" font-size="50" text-anchor="middle" fill="white">bam</text>
+    </svg>
+  

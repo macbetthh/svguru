@@ -39,47 +39,50 @@ const questions = [
 ];
 
 function generateSVG({ text, textColor, shape, shapeColor }) {
-    let shapeElement;
-  
-    switch (shape) {
-      case 'circle':
-        shapeElement = generateCircle(shapeColor);
-        break;
-      case 'triangle':
-        shapeElement = generateTriangle(shapeColor);
-        break;
-      case 'square':
-        shapeElement = generateSquare(shapeColor);
-        break;
-      case 'rectangle':
-        shapeElement = generateRectangle(shapeColor);
-        break;
-      case 'ellipse':
-        shapeElement = generateEllipse(shapeColor);
-        break;
-      case 'pentagon':
-        shapeElement = generatePentagon(shapeColor);
-        break;
-      case 'hexagon':
-        shapeElement = generateHexagon(shapeColor);
-        break;
-      case 'star':
-        shapeElement = generateStar(shapeColor);
-        break;
-      case 'heart':
-        shapeElement = generateHeart(shapeColor);
-        break;
-      default:
-        shapeElement = '';
-    }
-  
-    return `
-      <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        ${shapeElement}
-        <text x="150" y="120" font-size="40" text-anchor="middle" fill="${textColor}">${text}</text>
-      </svg>
-    `;
+  let shapeElement;
+
+  switch (shape) {
+    case 'circle':
+      shapeElement = generateCircle(shapeColor);
+      break;
+    case 'triangle':
+      shapeElement = generateTriangle(shapeColor);
+      break;
+    case 'square':
+      shapeElement = generateSquare(shapeColor);
+      break;
+    case 'rectangle':
+      shapeElement = generateRectangle(shapeColor);
+      break;
+    case 'ellipse':
+      shapeElement = generateEllipse(shapeColor);
+      break;
+    case 'pentagon':
+      shapeElement = generatePentagon(shapeColor);
+      break;
+    case 'hexagon':
+      shapeElement = generateHexagon(shapeColor);
+      break;
+    case 'star':
+      shapeElement = generateStar(shapeColor);
+      break;
+    case 'heart':
+      shapeElement = generateHeart(shapeColor);
+      break;
+    default:
+      shapeElement = '';
   }
+
+  // Adjust text position specifically for the star
+  const textYPosition = shape === 'star' ? '140' : '115';
+
+  return `
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      ${shapeElement}
+      <text x="150" y="${textYPosition}" font-size="50" text-anchor="middle" fill="${textColor}">${text}</text>
+    </svg>
+  `;
+}
 
 inquirer.prompt(questions).then(answers => {
   const svgContent = generateSVG(answers);
