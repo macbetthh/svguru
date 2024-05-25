@@ -1,12 +1,12 @@
 
       <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M140,58
-                   C 170,-2, 250,-2, 270,58
-                   C 300,158, 160,208, 140,268
-                   C 120,208, -20,158, 10,58
-                   C 30,-2, 110,-2, 140,58
-                   Z" 
-          fill="blue" />
+        <path d="M150,50
+                     C105,0,-42,50,60,120
+                     L150,180
+                     L240,120
+                     C342,40,195,0,150,50
+                     Z"
+              fill="blue" />
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">bam</text>
       </svg>
     

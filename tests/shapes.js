@@ -30,19 +30,15 @@ function generateStar(color) {
   return `<polygon points="150, 25 179, 111 269, 111 197, 165 223, 251 150, 200 77, 251 103, 165 31, 111 121, 111" fill="${color}" />`;
 }
 
-
 function generateHeart(color) {
-  return `<path d="M150 30
-                   C 100 0, 50 0, 50 70
-                   C 50 130, 150 180, 150 250
-                   C 150 180, 250 130, 250 70
-                   C 250 0, 200 0, 150 30
-                   Z"
-          fill="${color}" />`;
+  return `<path d="M150,50
+                     C105,0,-42,50,60,120
+                     L150,180
+                     L240,120
+                     C342,40,195,0,150,50
+                     Z"
+              fill="${color}" />`;
 }
-
-
-
 
 
 module.exports = {
