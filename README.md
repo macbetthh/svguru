@@ -14,6 +14,7 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 
 
 ## Video Walkthroughs/Previews
+Videos are included in this project directory -- `tests` > `project_video_walkthroughs`
 *Apologies for 3 videos! I used OBS and forgot to change to a display capture instead of window capture. Also, smaller file sizes this way ;)*
 
 [**Test Preview**](https://drive.google.com/file/d/1bzjRYbOyvtbBMCi6UM9N0Q1d_9kmVYoO/view?usp=sharing)
@@ -21,7 +22,7 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 https://github.com/macbetthh/svguru/assets/143623621/b0c9b662-df70-4061-a660-07d6fab82860
 
 
-[**User Input Walktrhough**](https://drive.google.com/file/d/199P_wu3bKgLl8Jw2b6w0Glv84mapdDR7/view?usp=sharing)
+[**User Input Walktrhough**](https://drive.google.com/file/d/199P_wu3bKgLl8Jw2b6w0Glv84mapdDR7/view?usp=sharing) \
 *Link takes you to regular speed video*
 
 https://github.com/macbetthh/svguru/assets/143623621/040f533e-9fdc-402b-828e-f9339aa0050a
