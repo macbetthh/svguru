@@ -13,6 +13,11 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 - Save the generated SVG file as `logo.svg`
 
 
+## Video Walkthroughs
+*Apologies for splitting into 3, I used OBS and forgot to change to a display capture instead of window capture. Also, smaller file sizes ;)*
+
+
+
 ## Installation
 
 1. Clone the repository:
