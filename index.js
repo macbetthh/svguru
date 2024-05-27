@@ -12,11 +12,14 @@ const {
   generateHeart
 } = require('./tests/shapes');
 
+console.log('Hello! SVGuru here to help you create your own custom SVG logo!'.rainbow);
+console.log('Answer a few short questions and your logo will be generated for you in the examples folder!'.magenta);
+
 const questions = [
   {
     type: 'input',
     name: 'text',
-    message: 'Enter up to three characters for your logo:'.cyan,
+    message: 'Enter up to three letters for your logo:'.cyan,
     validate: input => input.length <= 3 || 'Text must be three characters or less'.red
   },
   {
@@ -87,7 +90,7 @@ inquirer.prompt(questions).then(answers => {
   }
 
   // svg file will go to example folder
-  const filePath = path.join(examplesDir, 'Generated_Logo.svg');
+  const filePath = path.join(examplesDir, 'logo.svg');
   fs.writeFileSync(filePath, svgContent);
   console.log(`Find your newly generated file here: ${filePath}`.green);
 });

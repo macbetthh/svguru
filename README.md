@@ -2,6 +2,7 @@
 
 SVGuru is a Node.js command-line application that empowers users to effortlessly craft custom SVG logos with text and shapes.
 
+
 ## Features
 
 - Prompt user for text (up to three characters)
@@ -11,11 +12,12 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 - Generate an SVG file based on user input
 - Save the generated SVG file as `Generated_Logo.svg`
 
+
 ## Installation
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/svguru.git
+   git clone https://github.com/macbetthh/svguru.git
 &nbsp; 
 
 2. Navigate to the project directory:
@@ -26,7 +28,16 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 3. Install the dependencies:
    ```sh
    npm install
+### Dependencies
+
+- inquirer: Latest version (specified in `package.json`)
+- colors: Latest version (specified in `package.json`)
+
+### Dev Dependencies
+
+- jest: Latest version (specified in `package.json`)
 &nbsp; 
+
 
 ## Usage
 
@@ -36,9 +47,16 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 &nbsp; 
 - Follow the prompts to create your custom SVG logo. The generated SVG file will be saved as Generated_Logo.svg in the project directory.
 &nbsp; 
+
+
 ## Testing
 
-- Test files are located in the `tests` directory.Run the tests using Jest: 
+- Test files are located in the `tests` directory. Run the tests using Jest: 
     ```sh
     npm test
 &nbsp; 
+
+## Credits
+
+- Developer: me 💁🏼‍♀️
+- [SVG Path help](https://svg-path.com/) for star and heart (math adjustments by me)
