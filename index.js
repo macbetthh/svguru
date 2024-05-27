@@ -69,8 +69,13 @@ function generateSVG({ text, textColor, shape, shapeColor }) {
       shapeElement = '';
   }
 
-  // Adjust text position specifically for the star
-  const textYPosition = shape === 'star' ? '140' : '115';
+  // Adjusts text position specifically for the star & triangle
+  let textYPosition = '115'; // Default position
+  if (shape === 'star') {
+    textYPosition = '140';
+  } else if (shape === 'triangle') {
+    textYPosition = '130';
+  }
 
   return `
     <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
