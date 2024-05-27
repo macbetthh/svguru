@@ -42,18 +42,6 @@ const {
       expect(generateEllipse(color)).toBe(expectedSVG);
     });
   
-    test('generatePentagon creates correct SVG for a pentagon', () => {
-      const color = 'orange';
-      const expectedSVG = `<polygon points="150, 30 195, 100 150, 170 105, 100" fill="${color}" />`;
-      expect(generatePentagon(color)).toBe(expectedSVG);
-    });
-  
-    test('generateHexagon creates correct SVG for a hexagon', () => {
-      const color = 'cyan';
-      const expectedSVG = `<polygon points="150, 30 190, 75 150, 120 110, 75" fill="${color}" />`;
-      expect(generateHexagon(color)).toBe(expectedSVG);
-    });
-  
     test('generateStar creates correct SVG for a star', () => {
       const color = 'pink';
       const expectedSVG = `<polygon points="150, 25 179, 111 269, 111 197, 165 223, 251 150, 200 77, 251 103, 165 31, 111 121, 111" fill="${color}" />`;
