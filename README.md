@@ -38,23 +38,24 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 - jest: Latest version (specified in `package.json`)
 &nbsp; 
 
-
-## Usage
-
-- Run the application 
-   ```sh 
-   node index.js
-&nbsp; 
-- Follow the prompts to create your custom SVG logo. The generated SVG file will be saved as `logo.svg` in `examples` in the project directory.
-&nbsp; 
-
-
 ## Testing
 
 - Test files are located in the `tests` directory. Run the tests using Jest: 
     ```sh
     npm test
 &nbsp; 
+
+## Usage
+
+- Run the application 
+   ```sh 
+   node index.js
+- Follow the prompts to create your custom SVG logo. The generated SVG file will be saved as `logo.svg` in `examples` in the project directory.
+&nbsp; 
+- **Pro Tip**: I use the `SVG Preview` Extension on VS Code to see my SVG files immediately -- I recommend using it or one like it if you'd rather see it directly in the editor instead of in a browser or by opening another program! :)
+
+
+
 
 ## License
 Please refer to the LICENSE in the repo.
