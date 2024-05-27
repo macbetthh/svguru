@@ -55,11 +55,11 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 - **Pro Tip**: I use the `SVG Preview` Extension on VS Code to see my SVG files immediately -- I recommend using it or one like it if you'd rather see it directly in the editor instead of in a browser or by opening another program! :)
 
 
-
+&nbsp; 
 
 ## License
 Please refer to the LICENSE in the repo.
-
+&nbsp; 
 ## Credits
 
 - Developer: me 💁🏼‍♀️
