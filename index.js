@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const colors = require('colors'); // Correctly require colors
+const colors = require('colors');
 const path = require('path');
 const {
   generateCircle,
@@ -70,7 +70,7 @@ function generateSVG({ text, textColor, shape, shapeColor }) {
   }
 
   // Adjusts text position specifically for the star & triangle
-  let textYPosition = '115'; // Default position
+  let textYPosition = '115';
   if (shape === 'star') {
     textYPosition = '140';
   } else if (shape === 'triangle') {
@@ -88,7 +88,7 @@ function generateSVG({ text, textColor, shape, shapeColor }) {
 inquirer.prompt(questions).then(answers => {
   const svgContent = generateSVG(answers);
 
-  // makes sure example folder didn't disappear into the void
+  // makes sure example folder doesn't disappear into the void
   const examplesDir = path.join(__dirname, 'examples');
   if (!fs.existsSync(examplesDir)) {
     fs.mkdirSync(examplesDir);
@@ -97,5 +97,5 @@ inquirer.prompt(questions).then(answers => {
   // svg file will go to example folder
   const filePath = path.join(examplesDir, 'logo.svg');
   fs.writeFileSync(filePath, svgContent);
-  console.log(`Find your newly generated file here: ${filePath}`.green);
+  console.log(`Find your newly generated logo file here: ${filePath}`.green);
 });

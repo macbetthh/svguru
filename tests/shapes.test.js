@@ -5,8 +5,6 @@ const {
   generateSquare,
   generateRectangle,
   generateEllipse,
-  generatePentagon,
-  generateHexagon,
   generateStar,
   generateHeart
 } = require('./shapes');
