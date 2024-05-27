@@ -57,6 +57,13 @@ SVGuru is a Node.js command-line application that empowers users to effortlessly
 
 &nbsp; 
 
+## Shape Classes
+This project includes classes for different shapes (Circle*, Triangle*, Square*, Rectangle, Ellipse, Star, Heart). 
+Each class has a render method that returns a string representing the SVG element for the shape.
+
+**Required shapes - other shapes added to challenge myself😇*
+&nbsp; 
+
 ## License
 Please refer to the LICENSE in the repo.
 &nbsp; 

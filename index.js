@@ -1,15 +1,15 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const colors = require('colors');
+const colors = require('colors'); // Correctly require colors
 const path = require('path');
 const {
-  generateCircle,
-  generateTriangle,
-  generateSquare,
-  generateRectangle,
-  generateEllipse,
-  generateStar,
-  generateHeart
+  Circle,
+  Triangle,
+  Square,
+  Rectangle,
+  Ellipse,
+  Star,
+  Heart
 } = require('./tests/shapes');
 
 console.log('Hello! SVGuru here to help you create your own custom SVG logo!'.rainbow);
@@ -45,32 +45,31 @@ function generateSVG({ text, textColor, shape, shapeColor }) {
 
   switch (shape) {
     case 'circle':
-      shapeElement = generateCircle(shapeColor);
+      shapeElement = new Circle(shapeColor).render();
       break;
     case 'triangle':
-      shapeElement = generateTriangle(shapeColor);
+      shapeElement = new Triangle(shapeColor).render();
       break;
     case 'square':
-      shapeElement = generateSquare(shapeColor);
+      shapeElement = new Square(shapeColor).render();
       break;
     case 'rectangle':
-      shapeElement = generateRectangle(shapeColor);
+      shapeElement = new Rectangle(shapeColor).render();
       break;
     case 'ellipse':
-      shapeElement = generateEllipse(shapeColor);
+      shapeElement = new Ellipse(shapeColor).render();
       break;
     case 'star':
-      shapeElement = generateStar(shapeColor);
+      shapeElement = new Star(shapeColor).render();
       break;
     case 'heart':
-      shapeElement = generateHeart(shapeColor);
+      shapeElement = new Heart(shapeColor).render();
       break;
     default:
       shapeElement = '';
   }
 
-  // Adjusts text position specifically for the star & triangle
-  let textYPosition = '115';
+  let textYPosition = '115'; // Default position
   if (shape === 'star') {
     textYPosition = '140';
   } else if (shape === 'triangle') {
@@ -88,7 +87,7 @@ function generateSVG({ text, textColor, shape, shapeColor }) {
 inquirer.prompt(questions).then(answers => {
   const svgContent = generateSVG(answers);
 
-  // makes sure example folder doesn't disappear into the void
+  // makes sure example folder didn't disappear into the void
   const examplesDir = path.join(__dirname, 'examples');
   if (!fs.existsSync(examplesDir)) {
     fs.mkdirSync(examplesDir);
@@ -97,5 +96,5 @@ inquirer.prompt(questions).then(answers => {
   // svg file will go to example folder
   const filePath = path.join(examplesDir, 'logo.svg');
   fs.writeFileSync(filePath, svgContent);
-  console.log(`Find your newly generated logo file here: ${filePath}`.green);
+  console.log(`Find your newly generated file here: ${filePath}`.green);
 });
